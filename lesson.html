@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="course-details.html?course=robotics">Back to Course</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 id="lesson-title">Lesson Title</h2>
+        <p id="lesson-content">Lesson content goes here.</p>
+        
+        <a id="prev-lesson" class="btn btn-secondary">Previous Lesson</a>
+        <a id="next-lesson" class="btn btn-primary">Next Lesson</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const course = params.get("course");
+        const lesson = parseInt(params.get("lesson"));
+
+        const lessons = {
+            robotics: [
+                "Lesson 1: Introduction to Robotics",
+                "Lesson 2: Basics of Sensors and Actuators",
+                "Lesson 3: Building a Simple Robot"
+            ],
+            ai: [
+                "Lesson 1: Introduction to AI",
+                "Lesson 2: Neural Networks",
+                "Lesson 3: Machine Learning Applications"
+            ],
+            embedded: [
+                "Lesson 1: Getting Started with Microcontrollers",
+                "Lesson 2: Embedded C Programming",
+                "Lesson 3: Interfacing with Hardware"
+            ]
+        };
+
+        if (lessons[course] && lessons[course][lesson - 1]) {
+            document.getElementById("lesson-title").innerText = lessons[course][lesson - 1];
+            document.getElementById("lesson-content").innerText = "Content for " + lessons[course][lesson - 1];
+            
+            if (lesson > 1) {
+                document.getElementById("prev-lesson").href = `lesson.html?course=${course}&lesson=${lesson - 1}`;
+            } else {
+                document.getElementById("prev-lesson").style.display = "none";
+            }
+
+            if (lesson < lessons[course].length) {
+                document.getElementById("next-lesson").href = `lesson.html?course=${course}&lesson=${lesson + 1}`;
+            } else {
+                document.getElementById("next-lesson").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

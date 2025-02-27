@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Back to Courses</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 id="course-title">Course Name</h2>
+        <p id="course-description">This is the course description.</p>
+        
+        <h3>Lessons</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="lesson.html?course=robotics&lesson=1">Lesson 1: Introduction</a></li>
+            <li class="list-group-item"><a href="lesson.html?course=robotics&lesson=2">Lesson 2: Basics</a></li>
+            <li class="list-group-item"><a href="lesson.html?course=robotics&lesson=3">Lesson 3: Advanced Topics</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const course = params.get("course");
+
+        const courseData = {
+            robotics: {
+                title: "Introduction to Robotics",
+                description: "Learn the basics of robotics, including sensors, motors, and controllers."
+            },
+            ai: {
+                title: "AI & Machine Learning",
+                description: "Dive into AI, neural networks, and deep learning."
+            },
+            embedded: {
+                title: "Embedded Systems",
+                description: "Understand microcontrollers and embedded programming."
+            }
+        };
+
+        if (courseData[course]) {
+            document.getElementById("course-title").innerText = courseData[course].title;
+            document.getElementById("course-description").innerText = courseData[course].description;
+        }
+    </script>
+</body>
+</html>

@@ -111,8 +111,21 @@
                           </div>
                       </div>
                   </div>
-                  <a href="#" class="btn btn-primary mt-4">Learn More About Us</a>
-              </div>
+
+
+                  <a href="#" class="btn btn-primary mt-4" onclick="openLinks(); return false;">Learn More About Us</a>
+
+                  <script>
+                      function openLinks() {
+                          window.open("https://www.facebook.com/robochallroboticsteam", "_blank");
+                          setTimeout(function() {
+                              window.open("https://www.linkedin.com/in/rrt1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank");
+                          }, 1000); // Opens second link after 1 second delay
+                      }
+                  </script>
+                              
+            
+                </div>
           </div>
       </div>
   </div>
@@ -205,6 +218,73 @@
 </section>
 <!-------Features End-------> 
 
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+      <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#header-carousel" data-slide-to="1"></li>
+              <li data-target="#header-carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active" style="min-height: 300px;">
+                  <img class="position-relative w-100" src="img/carousel-1.jpg" style="min-height: 300px; object-fit: cover;">
+                  <div class="carousel-caption d-flex align-items-center justify-content-center">
+                      <div class="p-5" style="width: 100%; max-width: 900px;">
+                          <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
+                          <h1 class="display-3 text-white mb-md-4">Best Education From Your Home</h1>
+                          <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item" style="min-height: 300px;">
+                  <img class="position-relative w-100" src="img/carousel-2.jpg" style="min-height: 300px; object-fit: cover;">
+                  <div class="carousel-caption d-flex align-items-center justify-content-center">
+                      <div class="p-5" style="width: 100%; max-width: 900px;">
+                          <h5 class="text-white text-uppercase mb-md-3">>المركز الأول</h5>
+                          <h1 class="display-3 text-white mb-md-4">>المركز الأول</h1>
+                          <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item" style="min-height: 300px;">
+                  <img class="position-relative w-100" src="img/carousel-3.jpg" style="min-height: 300px; object-fit: cover;">
+                  <div class="carousel-caption d-flex align-items-center justify-content-center">
+                      <div class="p-5" style="width: 100%; max-width: 900px;">
+                          <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
+                          <h1 class="display-3 text-white mb-md-4">>المركز الأولe</h1>
+                          <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Carousel End -->
+
+
+  <!-- About Start -->
+  <div class="container-fluid py-5">
+      <div class="container py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-5">
+                  <img class="img-fluid rounded mb-4 mb-lg-0" src="img/about.jpg" alt="">
+              </div>
+              <div class="col-lg-7">
+                  <div class="text-left mb-4">
+                      <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
+                      <h1>Innovative Way To Learn</h1>
+                  </div>
+                  <p>Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum dolores amet voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus gubergren sit rebum clita amet, sea est sea vero sed et. Sadipscing labore tempor at sit dolor clita consetetur diam. Diam ut diam tempor no et, lorem dolore invidunt no nonumy stet ea labore, dolor justo et sit gubergren diam sed sed no ipsum. Sit tempor ut nonumy elitr dolores justo aliquyam ipsum stet</p>
+                  <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- About End -->
+
 <!-------Team Start------->
 <section class="team section-padding" data-scroll-index='3'>
   <div class="container">
@@ -286,6 +366,72 @@
 </section>
 
 <!-------Testimonial End-------> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Courses Section -->
+<section id="courses" class="courses section-padding" data-scroll-index='5'>
+  <div class="container">
+      <div class="sectioner-header text-center">
+          <h2>Our Courses</h2>
+          <span class="line"></span>
+          <p class="white">Explore our specialized courses in robotics, programming, and AI.</p>
+      </div>
+      <div class="row">
+          <!-- Course 1 -->
+          <div class="col-md-4">
+              <div class="card course-card">
+                  <img class="card-img-top" src="images/course1.jpg" alt="Course 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Introduction to Robotics</h5>
+                      <p class="card-text">Learn the basics of robotics, including sensors, motors, and controllers.</p>
+                      <a href="#" class="btn btn-primary">Enroll Now</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Course 2 -->
+          <div class="col-md-4">
+              <div class="card course-card">
+                  <img class="card-img-top" src="images/course2.jpg" alt="Course 2">
+                  <div class="card-body">
+                      <h5 class="card-title">AI & Machine Learning</h5>
+                      <p class="card-text">Dive into the world of AI, neural networks, and deep learning.</p>
+                      <a href="#" class="btn btn-primary">Enroll Now</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Course 3 -->
+          <div class="col-md-4">
+              <div class="card course-card">
+                  <img class="card-img-top" src="images/course3.jpg" alt="Course 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Embedded Systems</h5>
+                      <p class="card-text">Understand microcontrollers, embedded programming, and hardware interfaces.</p>
+                      <a href="#" class="btn btn-primary">Enroll Now</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
 <!-------FAQ Start------->
 <section style=" color:  #ee5739" class="faq section-padding prelative" data-scroll-index='5'>
@@ -372,7 +518,7 @@
                 <div class="contact-item media"> <i class="fa fa-mobile media-left media-right-margin"></i>
                   <div class="media-body">
                     <p class="text-uppercase">Phone</p>
-                    <p class="text-uppercase"><a class="text-white" href="tel:+15173977100">009900990099</a> </p>
+                    <p class="text-uppercase"><a class="text-white" href="tel:+201551356634">+20 155 135 6634</a> </p>
                   </div>
                 </div>
                 <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
@@ -414,6 +560,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
 <!-- scrollIt js --> 
+
+
+
+
+
+
+
 <script src="js/scrollIt.min.js"></script> 
 <script src="js/wow.min.js"></script> 
 <script>
